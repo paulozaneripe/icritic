@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "target": "es2020",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "lib": ["esnext"],
+        "outDir": "dist",
+        "declaration": true,
+        "allowJs": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "forceConsistentCasingInFileNames": false,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "rootDir": ".",
+        "baseUrl": ".",
+        "types": ["node"],
+        "paths": {
+            "@src/*": ["./src/*"]
+        },
+        "typeRoots": ["./node_modules/@types"]
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "dist"]
+}
