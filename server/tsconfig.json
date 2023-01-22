@@ -17,12 +17,12 @@
         "emitDecoratorMetadata": true,
         "rootDir": ".",
         "baseUrl": ".",
-        "types": ["node"],
         "paths": {
             "@src/*": ["./src/*"]
         },
+        "types": ["node"],
         "typeRoots": ["./node_modules/@types"]
     },
-    "include": ["src"],
+    "include": ["src", "vitest.config.ts"],
     "exclude": ["node_modules", "dist"]
 }

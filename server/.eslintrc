@@ -24,6 +24,7 @@
         "no-console": 0,
         "arrow-body-style": 0,
         "no-useless-escape": 0,
+        "no-unused-vars": 1,
         "react/jsx-filename-extension": 0,
         "@typescript-eslint/no-unused-vars": 1,
         "@typescript-eslint/no-non-null-assertion": 0,
@@ -33,42 +34,6 @@
         "no-restricted-syntax": 0,
         "no-useless-constructor": 0,
         "no-empty-function": 0,
-        "@typescript-eslint/naming-convention": [
-            2,
-            {
-                "selector": "interface",
-                "format": ["PascalCase"],
-                "custom": {
-                    "regex": "^I[A-Z]",
-                    "match": true
-                }
-            }
-        ],
-        "import-helpers/order-imports": [
-            1,
-            {
-                "newlinesBetween": "always",
-                "groups": [
-                    "module",
-                    "/^@shared/",
-                    ["parent", "sibling", "index"]
-                ],
-                "alphabetize": { "order": "asc", "ignoreCase": true }
-            }
-        ],
-        "import/extensions": [
-            2,
-            "ignorePackges",
-            {
-                "ts": "never"
-            }
-        ],
-        "import/no-extraneous-dependencies": [
-            2,
-            {
-                "devDependencies": ["**/*.spec.js"]
-            }
-        ],
         "prettier/prettier": 2
     },
     "settings": {
