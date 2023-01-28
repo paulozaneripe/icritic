@@ -14,6 +14,7 @@ describe('Create movie use case', () => {
             releaseDate: new Date(),
             language: 'fake-language',
             countryId: 1,
+            images: {} as unknown as File[],
         });
 
         const movies = await movieRepository.list();

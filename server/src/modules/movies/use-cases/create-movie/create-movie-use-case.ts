@@ -7,6 +7,7 @@ type CreateMovieRequest = {
     releaseDate: Date;
     language: string;
     countryId: number;
+    images: File[];
 };
 
 export class CreateMovieUseCase {

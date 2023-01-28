@@ -21,7 +21,7 @@
             "@src/*": ["./src/*"]
         },
         "types": ["node"],
-        "typeRoots": ["./node_modules/@types"]
+        "typeRoots": ["./node_modules/@types", "./src/types"]
     },
     "include": ["src", "vitest.config.ts"],
     "exclude": ["node_modules", "dist"]
