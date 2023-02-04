@@ -1,4 +1,5 @@
 import { Entity } from '@src/core/domain/entity';
+import { Image } from '@src/modules/images/entities/image';
 
 type MovieProps = {
     id?: string;
@@ -7,6 +8,7 @@ type MovieProps = {
     releaseDate: Date;
     language: string;
     countryId: number;
+    images?: Image[];
     createdAt?: Date;
 };
 
@@ -17,7 +19,7 @@ export class Movie extends Entity<MovieProps> {
 
     static create(props: MovieProps, id?: string) {
         const movie = new Movie(
-            { ...props, createdAt: props.createdAt ?? new Date() },
+            { ...props, createdAt: props.createdAt ?? new Date(), images: [] },
             id,
         );
 
