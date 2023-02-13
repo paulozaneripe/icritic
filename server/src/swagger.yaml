@@ -1,0 +1,23 @@
+openapi: 3.0.0
+info:
+  title: iCritic API Documentation
+  description: This is iCritic API
+  version: 1.0.0
+  contact:
+    email: paulozaneripe@hotmail.com
+paths:
+  "/movies":
+    post:
+      summary: Create a movie
+      description: Create a new movie
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                images:
+                    type: array
+                    items:
+                        type: string
+                        format: binary
