@@ -1,23 +1,90 @@
 openapi: 3.0.0
 info:
-  title: iCritic API Documentation
-  description: This is iCritic API
-  version: 1.0.0
-  contact:
-    email: paulozaneripe@hotmail.com
+    title: iCritic API Documentation
+    description: This is iCritic API
+    version: 1.0.0
+    contact:
+        email: paulozaneripe@hotmail.com
 paths:
-  "/movies":
-    post:
-      summary: Create a movie
-      description: Create a new movie
-      requestBody:
-        content:
-          multipart/form-data:
-            schema:
-              type: object
-              properties:
-                images:
-                    type: array
-                    items:
-                        type: string
-                        format: binary
+    '/movies':
+        post:
+            tags: ['Movies']
+            summary: Create a movie
+            description: Create a new movie
+            responses:
+                '201':
+                    description: Created
+            required: data
+            requestBody:
+                content:
+                    multipart/form-data:
+                        schema:
+                            type: object
+                            properties:
+                                images:
+                                    type: array
+                                    items:
+                                        type: string
+                                        format: binary
+                                data:
+                                    type: object
+                                    properties:
+                                        name:
+                                            type: string
+                                        synopsis:
+                                            type: string
+                                        releaseDate:
+                                            type: string
+                                        language:
+                                            type: string
+                                        countryId:
+                                            type: integer
+                        encoding:
+                            images:
+                                contentType: image/png, image/jpeg
+        get:
+            tags: ['Movies']
+            summary: List all movies
+            description: List all movies
+            responses:
+                '200':
+                    description: Success
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                properties:
+                                    movies:
+                                        type: array
+                                        items:
+                                            properties:
+                                                _id:
+                                                    type: string
+                                                props:
+                                                    type: object
+                                                    properties:
+                                                        name:
+                                                            type: string
+                                                        synopsis:
+                                                            type: string
+                                                        releaseDate:
+                                                            type: string
+                                                        language:
+                                                            type: string
+                                                        countryId:
+                                                            type: integer
+                                                        createdAt:
+                                                            type: string
+                                                        images:
+                                                            type: array
+                                                            items:
+                                                                properties:
+                                                                    _id:
+                                                                        type: string
+                                                                    props:
+                                                                        type: object
+                                                                        properties:
+                                                                            path:
+                                                                                type: string
+                                                                            createdAt:
+                                                                                type: string
