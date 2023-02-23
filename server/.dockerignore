@@ -1,0 +1,10 @@
+**/.dockerignore
+**/docker-compose*
+**/Dockerfile*
+**/tests
+**/coverage
+**/.git
+**/.gitignore
+**/.vscode
+**/compose*
+**/node_modules
