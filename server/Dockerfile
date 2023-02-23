@@ -4,8 +4,8 @@ WORKDIR /server
 
 COPY . .
 
-RUN yarn install
+RUN pnpm install
 
-RUN yarn build
+RUN pnpm build
 
-CMD yarn start
+CMD pnpm start
